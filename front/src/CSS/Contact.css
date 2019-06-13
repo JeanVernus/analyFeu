@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Geostar+Fill&display=swap');
+
 
 .titleContact{
-  font-family: 'Geostar Fill', cursive;
   font-size : 2em;
   color: white;
-  -webkit-text-stroke: 1px;
+  -webkit-text-stroke: 0.5px;
   -webkit-text-stroke-color: red;
 }
 
@@ -14,7 +13,7 @@
   -webkit-text-stroke-color: red;
 }
 .paraContact{
-  text-decoration: underline red;
+  text-decoration: underline black;
 }
 
 .paddingBox{
