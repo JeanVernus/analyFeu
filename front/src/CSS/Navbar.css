@@ -1,4 +1,6 @@
-.MENU {
-    display: flex;
-    justify-content: flex-end;
+a{
+    color: aliceblue;
+}
+.LINK_HOVER:hover {
+    color: deepskyblue;
 }
