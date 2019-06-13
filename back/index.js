@@ -3,6 +3,8 @@
 const Express = require("express");
 const Cors = require("cors");
 const BodyParser = require("body-parser");
+const gPassword = process.env.G_PASSWORD;
+const gUser = process.env.G_USER;
 
 const Port = 5000;
 
@@ -25,8 +27,8 @@ App.post("/sendForm", (req, res) => {
     host: "smtp.gmail.com",
     auth: {
       type: "login",
-      user: `${Guser}`,
-      pass: `${Gpassword}`
+      user: `${gUser}`,
+      pass: `${gPassword}`
     }
   });
   let mailOptions = {
