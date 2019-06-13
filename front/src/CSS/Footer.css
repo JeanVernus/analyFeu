@@ -1,0 +1,7 @@
+#FOOTER {
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+}
