@@ -31,10 +31,11 @@ export default function NavBarMaterial() {
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="Menu">
               <MenuIcon />
             </IconButton>
+
             <Typography variant="h6" className={classes.title}>
               Analyfeu
             </Typography>
-            <Button href={"/"} color="inherit">Bureau d'étude/Coordination SSI</Button>
+            <Button color="inherit">Bureau d'étude/Coordination SSI</Button>
             <Button color="inherit">Formations</Button>
             <Button href={"/contact"} color="inherit">Références contact</Button>
           </Toolbar>
