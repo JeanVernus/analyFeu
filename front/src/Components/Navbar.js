@@ -6,7 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import {grey} from "@material-ui/core/colors";
+import {red} from "@material-ui/core/colors";
+import '../CSS/Navbar.css'
 
 
 const useStyles = makeStyles(theme => ({
@@ -26,18 +27,19 @@ export default function NavBarMaterial() {
 
   return (
       <div className={classes.root}>
-        <AppBar position="static" style={{backgroundColor: grey[900]}} >
+        <AppBar position="static" style={{backgroundColor: red[900]}} >
           <Toolbar>
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="Menu">
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
+              <a href={'/'} className={"LINK_HOVER"} color={"inherit"}>
               Analyfeu
+              </a>
             </Typography>
-            <Button href={"/"} color={"inherit"}>Accueil</Button>
-            <Button href={"/bureauSSI"} color="inherit">Bureau d'étude/Coordination SSI</Button>
+            <Button className={"LINK_HOVER"} href={"/contact"} color="inherit">Références contact</Button>
             <Button href={"/formation"} color="inherit">Formations</Button>
-            <Button href={"/contact"} color="inherit">Références contact</Button>
+            <Button href={"/bureauSSI"} color="inherit">Bureau d'étude/Coordination SSI</Button>
           </Toolbar>
         </AppBar>
       </div>
