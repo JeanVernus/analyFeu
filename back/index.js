@@ -14,8 +14,9 @@ App.post('/sendForm', (req, res) => {
   const firstName = req.body.firstName;
   const lastName = req.body.lastName;
   const company = req.body.company;
-  const Text = req.body.Text;
-  const Email = req.body.Email;
+  const text = req.body.Text;
+  const email = req.body.Email;
+  const sujet = req.body.Sujet;
   const nodemailer = require("nodemailer");
 
   let transporter = nodemailer.createTransport({
@@ -24,15 +25,15 @@ App.post('/sendForm', (req, res) => {
     auth: {
       type: "login",
       user: "",
-      pass: ""
+      pass: "",
     }
   });
   let mailOptions = {
-    from: `${Email}`,
+    from: `${email}`,
     to: '"JeanVernus"<jeannywcs@gmail.com>',
-    subject: "Portefolio",
+    subject: "analyFeu",
     text: "",
-    html: `${firstName}"..."${lastName}<br />${job}"..."${company}<br />${Text}`,
+    html: `${firstName}""${lastName}<br />${sujet}""${company}<br />${text}`
   };
   transporter.sendMail(mailOptions, (err, info) => {
     if (err) {
