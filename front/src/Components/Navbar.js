@@ -39,13 +39,19 @@ export default function NavBarMaterial() {
           <Typography variant="h6" className={classes.title}>
             <a href={"/"} className={"LINK_HOVER"} color={"inherit"}>
               Analyfeu
-              </a>
-            </Typography>
-            <Button className={"LINK_HOVER"} href={"/contact"} color="inherit">Références contact</Button>
-            <Button href={"/formation"} color="inherit">Formations</Button>
-            <Button href={"/bureauSSI"} color="inherit">Bureau d'étude/Coordination SSI</Button>
-          </Toolbar>
-        </AppBar>
-      </div>
+            </a>
+          </Typography>
+          <Button className={"LINK_HOVER"} href={"/bureauSSI"} color="inherit">
+            Bureau d'étude/Coordination SSI
+          </Button>
+          <Button className={"LINK_HOVER"} href={"/formation"} color="inherit">
+            Formations
+          </Button>
+          <Button className={"LINK_HOVER"} href={"/contact"} color="inherit">
+            Références contact
+          </Button>
+        </Toolbar>
+      </AppBar>
+    </div>
   );
 }
