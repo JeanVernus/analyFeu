@@ -35,8 +35,8 @@ export default function NavBarMaterial() {
               Analyfeu
             </Typography>
             <Button href={"/"} color={"inherit"}>Accueil</Button>
-            <Button color="inherit">Bureau d'étude/Coordination SSI</Button>
-            <Button color="inherit">Formations</Button>
+            <Button href={"/bureauSSI"} color="inherit">Bureau d'étude/Coordination SSI</Button>
+            <Button href={"/formation"} color="inherit">Formations</Button>
             <Button href={"/contact"} color="inherit">Références contact</Button>
           </Toolbar>
         </AppBar>
