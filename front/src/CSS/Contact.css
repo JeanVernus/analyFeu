@@ -1,0 +1,28 @@
+
+
+.titleContact{
+  font-size : 2em;
+  color: white;
+  -webkit-text-stroke: 0.5px;
+  -webkit-text-stroke-color: red;
+}
+
+.form{
+  color: white;
+  -webkit-text-stroke: 0.5px;
+  -webkit-text-stroke-color: red;
+}
+.paraContact{
+  text-decoration: underline black;
+}
+
+.paddingBox{
+  padding: 5em;
+}
+.boxReference{
+  display: flex;
+}
+.marginBox{
+margin-left: 0;
+margin-right: auto;
+}

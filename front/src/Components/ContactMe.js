@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Form, Button } from 'semantic-ui-react';
+import { Form, Button, Segment } from 'semantic-ui-react';
 import Axios from 'axios';
-
+import Noty from 'noty';
+import '../CSS/Contact.css';
 
 class ContactMe extends Component {
   constructor(props) {
@@ -9,10 +10,11 @@ class ContactMe extends Component {
     this.state = {
       firstName: "",
       lastName: "",
-      job: "",
+      subject: "",
       company: "",
-      Text: "",
-      Email: ""
+      text: "",
+      email: "",
+      job:""
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -22,48 +24,98 @@ class ContactMe extends Component {
   handleChange(event, key) {
     console.log(this.state);
     this.setState({ [(event.target.name)]: event.target.value });
-    if(key === 'Prénom'){this.setState({firstName: event.target.value})};
-    if(key === 'Nom'){this.setState({lastName: event.target.value})};
-    if(key === 'Poste'){this.setState({job: event.target.value})};
-    if(key === 'Société'){this.setState({company: event.target.value})};
-    if(key === 'Texte'){this.setState({Text: event.target.value})};
-    if(key === 'Email'){this.setState({Email: event.target.value})};
+    if (key === 'firstName') { this.setState({ firstName: event.target.value }) };
+    if (key === 'lastName') { this.setState({ lastName: event.target.value }) };
+    if (key === 'company') { this.setState({ company: event.target.value }) };
+    if (key === 'text') { this.setState({ Text: event.target.value }) };
+    if (key === 'email') { this.setState({ email: event.target.value }) };
+    if (key === 'subject') { this.setState({ email: event.target.value }) };
+    if (key === 'job') { this.setState({ email: event.target.value }) };
   }
 
-  sendForm(event){
-    const {firstName, lastName, job, company, Text, Email} = this.state;
+  sendForm(event) {
+    const { firstName, lastName, company, text, email, subject, job } = this.state;
     event.preventDefault();
     Axios.post('http://localhost:5000/sendForm', {
       firstName,
       lastName,
-      job,
       company,
-      Text, 
-      Email
+      text,
+      email,
+      subject,
+      job
     })
       .then(res => {
-      console.log(res.data) 
+        if (res.data === 'send') {
+          new Noty({
+            text: 'Information enregistrées',
+            type: 'success',
+            theme: 'sunset',
+            timeout: 2000,
+          }).show();
+        }
       })
+      .catch(err => {
+        new Noty({
+          text: 'Un problème est survenue',
+          type: 'error',
+          theme: 'sunset',
+          timeout: 2000,
+        }).show();
+      });
   }
 
   render() {
     return (
-      <div>
-        <h1 className="invertH1" >Me contacter</h1>
-        <div className="segment">
-          <Form className="boxForm" inverted onSubmit={this.sendForm}>
-            <Form.Group widths='equal'>
-              <Form.Input name="Prénom" placeholder='Prénom' onChange={event => this.handleChange(event,"Prénom")} />
-              <Form.Input name="Nom" placeholder='Nom' onChange={event => this.handleChange(event,"Nom")}/>
-            </Form.Group>
-            <Form.Group widths='equal'>
-              <Form.Input />
-              <Form.Input name="Société" placeholder='Société' onChange={event => this.handleChange(event,"Société")}/>
-            </Form.Group>
-            <Form.Input name="Email" placeholder='Email' onChange={event => this.handleChange(event,"Email")}/>
-            <Form.TextArea className="font-size" label='Exprimez vous' name="Texte" onChange={event => this.handleChange(event,"Texte")}/>
-            <Button type='submit'>Soumettre</Button>
-          </Form><br /><br /><br /><br /><br /><br /><br /><br />
+      <div className="paddingBox">
+        <div className="boxReference">
+          <div  className="marginBox">
+            <h1 className="titleContact" >Références clients</h1>
+            <h4 className="paraContact">
+              Notre company, pour ce qui concerne son Centre de Formation ou son bureau
+            d’études<h4></h4>en prévention incendie, est au service de clients de relastName.
+              Ils nous font confiance :
+        </h4>
+            <li>Hôpital militaire inter armée de Laveran (Marseille)</li>
+            <li>Hôpital San Salvadour (APHP) (Hyères)</li>
+            <li>Universités de Provence & université Paul Cézanne</li>
+            <ul>
+              <li>- Faculté Saint Jérôme - Marseille</li>
+              <li>- Faculté Saint Charles - Marseille</li>
+              <li>- Site d’Unimeca et Polytec - Château Gombert</li>
+              <li>- Faculté de Lettres Schuman - Aix-en-Provence</li>
+              <li>- Faculté de Droit - Marseille</li>
+              <li>- Faculté de Droit d’Aix-en-Provence</li>
+              <li>- IUT de Saint Jérôme</li>
+              <li>- Institut d’Administration d’Entreprises - Puyricard</li>
+              <li>- Espace Poncet - Aix-en-Provence</li>
+              <li>- Et d’autres sites…….</li>
+            </ul>
+            <li>Université pierre Mendes France (IUT 2 Grenoble)</li>
+            <li>Université d’Avignon et Pays de Vaucluse (Faculté St Marthe)</li>
+            <li>company AMO</li>
+          </div>
+          <div className="boxContact">
+            <h1 className="titleContact" >Me contacter</h1><br />
+            <div>
+              <Segment className="BorerForm" inverted>
+                <Form className="form" inverted onSubmit={this.sendForm}>
+                  <Form.Group widths='equal'>
+                    <Form.Input name="firstName" placeholder='firstName' onChange={event => this.handleChange(event, "firstName")} />
+                    <Form.Input name="lastName" placeholder='lastName' onChange={event => this.handleChange(event, "lastName")} />
+                  </Form.Group>
+                  <Form.Group widths='equal'>
+                    <Form.Input name="job" placeholder='job' onChange={event => this.handleChange(event, "job")} /> 
+                    <Form.Input name="company" placeholder='company' onChange={event => this.handleChange(event, "company")} />
+                    <Form.Input name="email" placeholder='email' onChange={event => this.handleChange(event, "email")} />
+                  </Form.Group>
+                  <Form.Input name="subject" placeholder='subject' onChange={event => this.handleChange(event, "subject")} />
+                  <Form.TextArea label='Exprimez vous' name="text" onChange={event => this.handleChange(event, "text")} />
+                  <Button type='submit'>Soumettre</Button>
+                </Form>
+              </Segment><br /><br /><br /><br /><br /><br /><br /><br />
+            </div>
+          </div>
         </div>
       </div>
     );

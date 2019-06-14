@@ -1,6 +1,6 @@
-const Express = require("express");
-const Cors = require("cors");
-const BodyParser = require("body-parser");
+const Express = require('express');
+const Cors = require('cors');
+const BodyParser = require('body-parser');
 
 const Port = 5000;
 
@@ -14,8 +14,10 @@ App.post('/sendForm', (req, res) => {
   const firstName = req.body.firstName;
   const lastName = req.body.lastName;
   const company = req.body.company;
-  const Text = req.body.Text;
-  const Email = req.body.Email;
+  const text = req.body.text;
+  const email = req.body.email;
+  const subject = req.body.subject;
+  const job = req.body.job;
   const nodemailer = require("nodemailer");
 
   let transporter = nodemailer.createTransport({
@@ -23,27 +25,29 @@ App.post('/sendForm', (req, res) => {
     host: "smtp.gmail.com",
     auth: {
       type: "login",
-      user: "",
-      pass: ""
+      user: "jeannywcs@gmail.com",
+      pass: "Enigmhatik777",
     }
   });
   let mailOptions = {
-    from: `${Email}`,
+    from: `${email}`,
     to: '"JeanVernus"<jeannywcs@gmail.com>',
-    subject: "Portefolio",
+    subject: "analyFeu",
     text: "",
-    html: `${firstName}"..."${lastName}<br />${job}"..."${company}<br />${Text}`,
+    html: `${firstName}""${lastName}<br />${company}""${job}<br />${subject}<br />${text}`
   };
   transporter.sendMail(mailOptions, (err, info) => {
     if (err) {
+      res.status(500).json("error")
       console.log(err.message);
       return process.exit(1)
     }
     else {
+      res.status(200).json("send")
       console.log(info);
     }
   });
-})
+});
 
 App.listen(Port, () => {
   console.log(`server started on ${Port}`);

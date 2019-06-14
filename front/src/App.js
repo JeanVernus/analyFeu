@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
-import ContactMe from './Components/ContactMe';
 import './CSS/App.css';
+import NavBarMaterial from "./Components/Navbar";
+import Routing from "./Components/Routing";
+import FooterBar from "./Components/Footer";
+
+
+
+
+
+
 
 class App extends Component {
   render() {
     return (
       <div>
-        <ContactMe/>
+        <NavBarMaterial/>
+        <Routing/>
+        <FooterBar/>
       </div>
     );
   }
