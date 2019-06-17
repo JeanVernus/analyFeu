@@ -7,7 +7,8 @@ class BureauSSI extends Component {
     this.state = {
 
     }
-  }
+  } 
+
   render() {
     return (
       <div className="paddingBureauGlobal">

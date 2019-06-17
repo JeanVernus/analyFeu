@@ -6,7 +6,6 @@ import { red } from "@material-ui/core/colors";
 import "../CSS/Navbar.css";
 import "../CSS/Footer.css";
 import { Box } from "@material-ui/core";
-import ContactMe from './ContactMe';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -24,19 +23,19 @@ export default function FooterBar() {
   const classes = useStyles();
 
   return (
-    <div>
+    <div className="boxFooterAlign">
       <div id={"FOOTER"}>
         <div className={classes.root}>
           <AppBar position="static" style={{ backgroundColor: red[900] }}>
             <Box >
               <Typography>
                 <strong className="textCenter">
-                  <span>AnalyFeu</span><span>9 Chemin de la clauvade</span><span> 89390 CUERS</span><span>Tel : 07 07 07 07 07</span><a href={ContactMe}>Nous Contacter</a>
+                  <span>AnalyFeu &nbsp;&nbsp;&nbsp;&nbsp;</span><span>9 Chemin de la clauvade&nbsp;&nbsp;</span><span> 89390 CUERS&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                  <span>Tel : 07 07 07 07 07&nbsp;&nbsp;&nbsp;&nbsp;</span><a href={"/contact"}>Nous Contacter</a>
                 </strong>
               </Typography>
             </Box>
           </AppBar>
-
         </div>
       </div>
     </div>

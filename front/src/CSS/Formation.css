@@ -1,0 +1,56 @@
+.paddingFormationGlobal {
+  padding: 5em
+}
+
+.titleFormation {
+  color: orangered;
+  font-size: 40px;
+  text-align: center;
+}
+
+.subLineFormation {
+  font-size: 25px;
+  color: orange;
+  text-align: center;
+}
+
+.subTitleFormation {
+  color: yellow;
+  font-size: 20px;
+  text-align: center
+}
+
+.boxFormation {
+  padding-left: 1em;
+  padding-right: 3em;
+}
+
+.displayFormation {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 15px
+}
+
+.marginFormation {
+  margin-right: 0;
+}
+
+.marginFormation1 {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.Formation1 {
+  font-size: 100px;
+  opacity: 0.2;
+  text-align: center;
+}
+.Formation2 {
+  font-size: 50px;
+  opacity: 0.2;
+  text-align: center;
+}
+
+p {
+  font-size: 15px
+}

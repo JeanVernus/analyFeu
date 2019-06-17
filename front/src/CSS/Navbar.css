@@ -1,6 +1,18 @@
-a{
-    color: aliceblue;
+a {
+    color: white;
 }
-.LINK_HOVER:hover {
-    color: deepskyblue;
+
+.LINK_HOVER1:hover {
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-stroke-color: white;
+    color: orangered;
+    font-weight: bolder
+}
+
+.LINK_HOVER2:hover {
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-stroke-color: white;
+    color: orangered;
+    font-size: 50px;
+    font-weight: bolder
 }

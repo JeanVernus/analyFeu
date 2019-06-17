@@ -1,0 +1,23 @@
+.titlePrez {
+  color: yellow;
+  font-size: 40px;
+  text-align: center;
+}
+
+.homePosition {
+  padding: 5em;
+}
+
+.carousselPosition {
+  display: flex;
+  justify-content: center;
+}
+
+.presentationPosition {
+  text-align: center;
+}
+
+.logoPosition{
+  display: flex;
+  justify-content: center;
+}

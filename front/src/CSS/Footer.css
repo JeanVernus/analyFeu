@@ -1,8 +1,11 @@
 #FOOTER {
-    display: flex;
-    min-width: 300vh;
+    max-width: 1700px;
 }
 
-.textCenter{
+.textCenter {
     font-size: 20px;
+}
+
+.boxFooterAlign {
+    text-align: center;
 }

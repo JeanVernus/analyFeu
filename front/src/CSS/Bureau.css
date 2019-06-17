@@ -1,45 +1,45 @@
-.paddingBureauGlobal{
+.paddingBureauGlobal {
   padding: 5em
 }
 
-.titleBureau{
+.titleBureau {
   color: orangered;
-  font-size:40px;
+  font-size: 40px;
   text-align: center;
 }
 
-.subLineBureau{
-  font-size:25px;
+.subLineBureau {
+  font-size: 25px;
   color: orange;
   text-align: center;
-
 }
 
-.subTitleBureau{
+.subTitleBureau {
   color: yellow;
-  font-size:20px;
+  font-size: 20px;
 }
 
+.boxBureau {
+  padding-left: 1em;
+  padding-right: 3em;
+}
 
-.boxBureau{
-padding-left: 1em;
-padding-right: 3em;
+.displayBureau {
+  display: flex;
+  font-size: 15px
 }
-.displayBureau{
-display: flex;
-font-size:15px
-}
-.marginBureau{
+
+.marginBureau {
   margin-right: 0;
   margin-left: auto;
   text-align: right;
 }
 
-p{
-  font-size:15px
+p {
+  font-size: 15px
 }
 
-.Conseil{
+.Conseil {
   font-size: 100px;
   opacity: 0.2;
   text-align: center;

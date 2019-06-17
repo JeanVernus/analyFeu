@@ -1,28 +1,36 @@
-
-
-.titleContact{
-  font-size : 2em;
+.titleContact {
+  font-size: 2em;
   color: white;
   -webkit-text-stroke: 0.5px;
   -webkit-text-stroke-color: red;
 }
 
-.form{
+.form {
   color: white;
   -webkit-text-stroke: 0.5px;
   -webkit-text-stroke-color: red;
 }
-.paraContact{
+
+.paraContact {
   text-decoration: underline black;
 }
 
-.paddingBox{
-  padding: 5em;
+.paddingBox {
+  padding: 8em;
+  margin-top: 3em;
 }
-.boxReference{
+
+.boxReference {
   display: flex;
 }
-.marginBox{
-margin-left: 0;
-margin-right: auto;
+
+.marginBox {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.Contact {
+  font-size: 100px;
+  opacity: 0.2;
+  text-align: center;
 }
