@@ -50,7 +50,7 @@ class Formation extends Component {
       
       <a href=""><h3>>> Télécharger le catalogue de formation </h3></a>
 
-      <h1>Formations</h1><span><h3> incendie - secourisme</h3></span>
+      <h1>Formations</h1><span><h3> incendie - secourisme</h3></span><br /><br />
 
       </div>
      );

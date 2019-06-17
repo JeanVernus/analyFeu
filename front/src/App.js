@@ -13,11 +13,13 @@ import FooterBar from "./Components/Footer";
 class App extends Component {
   render() {
     return (
-      <div>
-        <NavBarMaterial/>
-        <Routing/>
-        <FooterBar/>
-      </div>
+      <div className="feu">
+        <div>
+          <NavBarMaterial />
+          <Routing />
+          <FooterBar />
+        </div>
+      </div >
     );
   }
 }

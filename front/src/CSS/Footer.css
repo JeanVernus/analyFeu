@@ -1,6 +1,8 @@
 #FOOTER {
     display: flex;
-    position: fixed;
-    bottom: 0;
     min-width: 300vh;
+}
+
+.textCenter{
+    font-size: 20px;
 }
